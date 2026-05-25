@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* FORM */
+.form-section {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.skills-input {
+  display: flex;
+  gap: 10px;
+}
+
+.skills-input button {
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.skills-list {
+  margin-top: 10px;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.skill-tag button {
+  margin-left: 8px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* PREVIEW */
+.preview-section {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.preview-section h1 {
+  margin-bottom: 5px;
+}
+
+.contact {
+  color: gray;
+}
+
+.skills-preview {
+  margin-top: 10px;
+}
+
+.skill-preview {
+  display: inline-block;
+  background: #e9ecef;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 15px;
+}

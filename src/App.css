@@ -1,0 +1,102 @@
+.scene {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* POT CONTAINER */
+.pot-area {
+  position: relative;
+  width: 260px;
+  overflow: visible; /* IMPORTANT */
+}
+
+/* POT IMAGE */
+.pot-img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
+/* 🥛 MILK */
+.milk {
+  position: absolute;
+  top: 30px; /* pot mouth */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 140px; /* fixed milk body */
+  background: white;
+  border-radius: 60px;
+  z-index: 2;
+
+  animation: milkMove 3s ease-in forwards;
+}
+
+/* FOAM SHAPE */
+.milk::before,
+.milk::after {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.milk::before {
+  width: 80px;
+  height: 60px;
+  top: -30px;
+  left: -20px;
+}
+
+.milk::after {
+  width: 90px;
+  height: 70px;
+  top: -40px;
+  right: -25px;
+}
+
+/* 🔥 REAL DOWNFLOW ANIMATION */
+@keyframes milkMove {
+  from {
+    transform: translate(-50%, 0);
+  }
+  to {
+    transform: translate(-50%, 260px); /* move DOWN */
+  }
+}
+
+/* BUTTON */
+.pongal-btn {
+  margin-top: 40px;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  background: #8d3c00;
+  color: white;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* GREETING */
+.wish {
+  margin-top: 30px;
+  font-size: 32px;
+  color: #6b2c00;
+  animation: pop 0.8s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
